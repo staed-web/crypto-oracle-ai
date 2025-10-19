@@ -1,10 +1,12 @@
 // Firebase Config — REPLACE WITH YOUR OWN
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "your-project.firebaseapp.com",
-  projectId: "your-project",
-  appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyBMUac5ET8776dImj0NMRpMfVmwEJTVoGo",
+    authDomain: "crypto-oracle-ai-49736.firebaseapp.com",
+    projectId: "crypto-oracle-ai-49736",
+    storageBucket: "crypto-oracle-ai-49736.firebasestorage.app",
+    messagingSenderId: "106091389267",
+    appId: "1:106091389267:web:cd20ed300f036edf4601a6"
+  };
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
