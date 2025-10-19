@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Oracle AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <!-- TradingView Lightweight Charts -->
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <!-- Auth Modal -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeAuth">&times;</span>
+      <div id="authForm">
+        <h2 id="authTitle">Sign In</h2>
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button id="authSubmit">Sign In</button>
+        <p id="toggleAuth">Don’t have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+      </div>
+      <div id="userPanel" style="display:none;">
+        <p>Welcome, <span id="displayName">User</span>!</p>
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" style="display:none;">
+    <header>
+      <h1>Crypto Oracle AI</h1>
+      <div id="userInfo"></div>
+    </header>
+
+    <div class="container">
+      <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+
+      <div class="predictions">
+        <h2>AI Take-Profit Targets</h2>
+        <ul id="tpList">
+          <li>Loading predictions...</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/ai-engine.js"></script>
+</body>
+</html>
